@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Deployment to Amazon S3
+```
+npm run release
+```
+
 ### Lints and fixes files
 ```
 npm run lint
