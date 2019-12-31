@@ -38,16 +38,19 @@
     <v-content>
       <HelloWorld />
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from "./components/Footer.vue";
 import HelloWorld from "./components/HelloWorld";
 
 export default {
   name: "App",
 
   components: {
+    Footer,
     HelloWorld
   },
 

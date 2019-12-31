@@ -49,18 +49,6 @@
         </a>
       </v-layout>
     </v-flex>
-    <v-footer>
-      <a
-        v-for="(soc, i) in social"
-        :key="i"
-        :href="soc.href"
-        class="subheading mx-3"
-      >
-        <v-icon color="indigo">{{ soc.icon }}</v-icon>
-      </a>
-      <v-spacer></v-spacer>
-      <div>&copy; {{ new Date().getFullYear() }}</div>
-    </v-footer>
   </v-container>
 </template>
 
@@ -123,22 +111,6 @@ export default {
       {
         text: "Frequently Asked Questions",
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
-      }
-    ],
-    social: [
-      {
-        _id: 0,
-        text: "Github",
-        href: "https://github.com/olen-d/recurrent-bokeh-site",
-        icon: "mdi-github-circle",
-        order: 0
-      },
-      {
-        _id: 1,
-        text: "Github",
-        href: "https://github.com/olen-d/recurrent-bokeh-site",
-        icon: "mdi-github-circle",
-        order: 1
       }
     ]
   })
