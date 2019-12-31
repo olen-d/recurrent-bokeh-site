@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="indigo" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -22,14 +22,16 @@
       </div>
 
       <v-spacer></v-spacer>
+      <v-btn to="/why" text>
+        <span class="mr-2">Why?</span>
+      </v-btn>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn to="/build" text>
+        <span class="mr-2">Build</span>
+      </v-btn>
+
+      <v-btn to="/resources" text>
+        <span class="mr-2">Resources</span>
       </v-btn>
     </v-app-bar>
 
