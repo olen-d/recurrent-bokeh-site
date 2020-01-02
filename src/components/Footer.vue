@@ -2,38 +2,58 @@
   <v-footer color="indigo darken-4">
     <v-container fluid>
       <v-row>
-        <v-col xs="12" md="3">
-          <v-card class="flex" flat tile>
-            <v-card-title>
+        <v-col cols="12" sm="6" md="3">
+          <v-card color="indigo darken-4" flat tile class="flex">
+            <v-card-title class="indigo--text text--lighten-3">
               Recurrent Bokeh
             </v-card-title>
-            <v-list>
+            <v-list color="indigo darken-4">
               <v-list-item v-for="(co, i) in company" :key="i">
                 <v-list-item-content>
-                  <v-btn>
-                    <router-link :to="co.href">{{ co.text }}</router-link>
-                  </v-btn>
+                  <router-link
+                    :to="co.href"
+                    class="no-underline indigo--text text--lighten-2"
+                    >{{ co.text }}</router-link
+                  >
                 </v-list-item-content>
               </v-list-item>
             </v-list>
           </v-card>
         </v-col>
-        <v-col xs="12" md="3">
-          <v-card class="flex" flat tile>
-            <v-card-title>
+        <v-col cols="12" sm="6" md="3">
+          <v-card color="indigo darken-4" flat tile class="flex">
+            <v-card-title class="indigo--text text--lighten-3">
               Connect With Us
             </v-card-title>
-            <v-btn v-for="(soc, i) in social" :key="i" icon>
-              <a :href="soc.href" class="no-underline">
-                <v-icon color="indigo" size="2rem" dark>{{ soc.icon }}</v-icon>
-              </a>
-            </v-btn>
+            <v-list color="indigo darken-4">
+              <v-list-item v-for="(soc, i) in social" :key="i">
+                <v-list-item-content>
+                  <a
+                    :href="soc.href"
+                    class="indigo--text text--lighten-2 no-underline"
+                  >
+                    <v-icon color="indigo lighten-2" dark>
+                      {{ soc.icon }}
+                    </v-icon>
+                    &nbsp;{{ soc.text }}
+                  </a>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
           </v-card>
         </v-col>
       </v-row>
-      <v-row>
+      <v-divider></v-divider>
+      <v-row color="indigo">
         <v-col>
-          <div>&copy; {{ new Date().getFullYear() }} <a href="https://www.olen.dev/">Olen Daelhousen</a></div>
+          <div class="indigo--text text--lighten-2">
+            &copy; {{ new Date().getFullYear() }}
+            <a
+              href="https://www.olen.dev/"
+              class="indigo--text text--lighten-2 no-underline"
+              >Olen Daelhousen</a
+            >
+          </div>
         </v-col>
       </v-row>
     </v-container>
