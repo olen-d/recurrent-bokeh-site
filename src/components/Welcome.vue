@@ -27,7 +27,7 @@ export default {
     welcome: {
       headline: "Your Photography",
       message:
-        "Recurrent Bokeh is a content management system for photographers - it ships with a default front-end optimized for displaying images elegantly and beautifully. "
+        "Recurrent Bokeh is a content management system for photographers - it ships with a default front end optimized for displaying images elegantly and beautifully. "
     }
   })
 };

@@ -1,6 +1,10 @@
 <template>
   <v-container>
     <Welcome />
+    <FrontPageContent
+      v-bind:heading="flexibility.heading"
+      v-bind:content="flexibility.content"
+    />
 
     <v-flex mb-5 xs12>
       <h2 class="headline font-weight-bold mb-3">What's next?</h2>
@@ -53,16 +57,23 @@
 </template>
 
 <script>
+import FrontPageContent from "./FrontPageContent.vue";
 import Welcome from "./Welcome.vue";
 
 export default {
   name: "HelloWorld",
 
   components: {
+    FrontPageContent,
     Welcome
   },
 
   data: () => ({
+    flexibility: {
+      heading: "Flexibility",
+      content:
+        "Photographers can begin publishing images immediately using Recurring Bokeh with the included front end and administration client. Power users can leverage a back end powered by microservices accessed through an application programming interface (API) to build a completely custom front end to meet the needs of even the most demanding application."
+    },
     ecosystem: [
       {
         text: "vuetify-loader",
