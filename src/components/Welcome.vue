@@ -13,7 +13,7 @@
       <h1 class="display-2 font-weight-bold mb-3">
         {{ welcome.headline }}
       </h1>
-      <p class="subheading font-weight-regular">
+      <p class="headline font-weight-regular">
         {{ welcome.message }}
       </p>
     </v-col>
