@@ -2,10 +2,10 @@
   <v-row>
     <v-col align="center" cols="12">
       <v-img
-        :src="require('../assets/logo.svg')"
+        :src="require('../assets/logos/rb_round.png')"
         class="my-3"
         contain
-        height="200"
+        height="300"
       ></v-img>
     </v-col>
 
