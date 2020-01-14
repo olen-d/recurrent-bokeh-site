@@ -42,6 +42,9 @@
             </v-list>
           </v-card>
         </v-col>
+        <v-col cols="12" md="3">
+          <EmailCollector />
+        </v-col>
       </v-row>
       <v-divider></v-divider>
       <v-row color="indigo">
@@ -60,8 +63,14 @@
   </v-footer>
 </template>
 <script>
+import EmailCollector from "./EmailCollector.vue";
+
 export default {
   name: "Footer",
+
+  components: {
+    EmailCollector
+  },
 
   data: () => ({
     company: [
