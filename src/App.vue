@@ -3,21 +3,21 @@
     <v-app-bar app color="indigo" dark>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          :src="require('./assets/logos/rb_small.png')"
+          alt="Recurrent Bokeh Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
           transition="scale-transition"
           width="40"
         />
 
         <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
+          :src="require('./assets/logos/rb_word_mark.png')"
+          alt="Recurrent Bokeh Name"
+          class="shrink hidden-sm-and-down"
           contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          min-width="225"
+          width="225"
         />
       </div>
 
