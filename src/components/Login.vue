@@ -1,12 +1,12 @@
 <template>
   <v-row>
-    <v-col cols="4">
+    <v-col cols="1" sm="2" md="4">
       &nbsp;
     </v-col>
-    <v-col cols="4">
+    <v-col cols="10" sm="8" md="4">
       <LoginForm />
     </v-col>
-    <v-col cols="4">
+    <v-col cols="1" sm="2" md="4">
       &nbsp;
     </v-col>
   </v-row>
