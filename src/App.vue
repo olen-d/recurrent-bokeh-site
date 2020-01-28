@@ -36,7 +36,7 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <RouterView></RouterView>
     </v-content>
     <Footer />
   </v-app>
@@ -44,14 +44,12 @@
 
 <script>
 import Footer from "./components/Footer.vue";
-import HelloWorld from "./components/HelloWorld";
 
 export default {
   name: "App",
 
   components: {
-    Footer,
-    HelloWorld
+    Footer
   },
 
   data: () => ({

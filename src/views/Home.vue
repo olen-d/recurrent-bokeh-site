@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Recurrent Bokeh logo" src="../assets/logos/rb_round.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld />
   </div>
 </template>
 
