@@ -5,7 +5,7 @@
     </h2>
     <form id="login-form">
       <v-text-field
-        v-model="form.userName"
+        v-model="form.username"
         type="text"
         autocapitalize="off"
         autocorrect="off"
@@ -38,7 +38,7 @@ export default {
   data: () => {
     return {
       form: {
-        userName: null,
+        username: null,
         password: null
       }
     };
@@ -46,9 +46,10 @@ export default {
 
   methods: {
     submitLoginForm() {
+      const { username, password } = this.form;
       const formData = {
-        userName: this.form.userName,
-        password: this.form.password
+        username,
+        password
       };
 
       fetch(`${process.env.VUE_APP_API_BASE_URL}/api/users/login`, {
