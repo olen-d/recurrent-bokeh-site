@@ -5,12 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    loginPage: false
+    loginPage: false,
+    signupPage: false
   },
 
   mutations: {
     setLoginPage(state, loginPage) {
       state.loginPage = loginPage;
+    },
+
+    setSignupPage(state, signupPage) {
+      state.signupPage = signupPage;
     }
   },
   actions: {},
