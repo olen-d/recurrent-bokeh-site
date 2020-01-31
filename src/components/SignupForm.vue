@@ -35,7 +35,7 @@
         color="indigo darken-3"
       />
       <v-text-field
-        v-model="signupData.userName"
+        v-model="signupData.username"
         type="text"
         autocapitalize="off"
         autocorrect="off"
@@ -71,7 +71,7 @@ export default {
         firstName: null,
         lastName: null,
         email: null,
-        userName: null,
+        username: null,
         password: null
       }
     };
@@ -85,17 +85,17 @@ export default {
         firstName,
         lastName,
         email,
-        userName,
+        username,
         password
       } = this.signupData;
       // TODO: Validate this mess
 
       const formData = {
-        firstName,
-        lastName,
-        email,
-        userName,
-        password
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim().toLowerCase(),
+        username: username.trim(),
+        password: password.trim()
       };
 
       fetch(`${process.env.VUE_APP_API_BASE_URL}/api/users/create`, {
