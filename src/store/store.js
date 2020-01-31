@@ -5,11 +5,21 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    currentJWT: "",
+    now: new Date(),
     loginPage: false,
     signupPage: false
   },
 
   mutations: {
+    setJWT(state, jwt) {
+      state.currentJWT = jwt;
+    },
+
+    setNow(state) {
+      state.now = new Date();
+    },
+
     setLoginPage(state, loginPage) {
       state.loginPage = loginPage;
     },
@@ -18,6 +28,14 @@ export default new Vuex.Store({
       state.signupPage = signupPage;
     }
   },
-  actions: {},
+
+  actions: {
+    start({ commit }) {
+      setInterval(() => {
+        commit("setNow");
+      }, 1000 * 60);
+    }
+  },
+
   modules: {}
 });

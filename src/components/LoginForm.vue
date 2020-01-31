@@ -48,8 +48,8 @@ export default {
     submitLoginForm() {
       const { username, password } = this.form;
       const formData = {
-        username,
-        password
+        username: username.trim(),
+        password: password.trim()
       };
 
       fetch(`${process.env.VUE_APP_API_BASE_URL}/api/users/login`, {
