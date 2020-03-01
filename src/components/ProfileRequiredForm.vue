@@ -1,11 +1,31 @@
 <template>
   <div id="signup-form-container">
     <h2 class="mt-6">
-      {{ formTitle }}
+      Sign Up
     </h2>
     <form id="signup-form">
       <v-text-field
-        v-model="signupFormData.email"
+        v-model="signupData.firstName"
+        type="text"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        size="25"
+        label="First Name"
+        color="indigo darken-3"
+      />
+      <v-text-field
+        v-model="signupData.lastName"
+        type="text"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        size="25"
+        label="Last Name"
+        color="indigo darken-3"
+      />
+      <v-text-field
+        v-model="signupData.email"
         type="email"
         autocapitalize="off"
         autocorrect="off"
@@ -15,7 +35,17 @@
         color="indigo darken-3"
       />
       <v-text-field
-        v-model="signupFormData.password"
+        v-model="signupData.username"
+        type="text"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        size="25"
+        label="Username"
+        color="indigo darken-3"
+      />
+      <v-text-field
+        v-model="signupData.password"
         type="password"
         size="25"
         label="Password"
@@ -35,17 +65,13 @@
 
 <script>
 export default {
-  props: {
-    formTitle: {
-      type: String,
-      default: "Sign Up"
-    }
-  },
-
   data: () => {
     return {
-      signupFormData: {
+      signupData: {
+        firstName: null,
+        lastName: null,
         email: null,
+        username: null,
         password: null
       }
     };
@@ -55,11 +81,20 @@ export default {
     submitSignUpForm() {
       localStorage.removeItem("user_token");
 
-      const { email, password } = this.signupData;
+      const {
+        firstName,
+        lastName,
+        email,
+        username,
+        password
+      } = this.signupData;
       // TODO: Validate this mess
 
       const formData = {
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
         email: email.trim().toLowerCase(),
+        username: username.trim(),
         password: password.trim()
       };
 

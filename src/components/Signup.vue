@@ -4,7 +4,7 @@
       &nbsp;
     </v-col>
     <v-col cols="10" sm="8" md="4">
-      <SignupForm />
+      <SignupForm formTitle="Sign Up" />
     </v-col>
     <v-col cols="1" sm="2" md="4">
       &nbsp;
