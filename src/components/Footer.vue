@@ -49,6 +49,14 @@
       <v-divider></v-divider>
       <v-row color="indigo">
         <v-col>
+          <router-link
+            to="/signup"
+            v-if="!$store.getters.authorized && !$store.getters.signupPage"
+            class="indigo--text text--lighten-2 no-underline"
+            >Sign Up
+          </router-link>
+        </v-col>
+        <v-col>
           <div class="indigo--text text--lighten-2">
             &copy; {{ new Date().getFullYear() }}
             <a
