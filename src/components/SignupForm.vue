@@ -55,7 +55,7 @@ export default {
     submitSignUpForm() {
       localStorage.removeItem("user_token");
 
-      const { email, password } = this.signupData;
+      const { email, password } = this.signupFormData;
       // TODO: Validate this mess
 
       const formData = {
@@ -77,11 +77,7 @@ export default {
           if (dataObj.isLoggedIn && dataObj.token) {
             this.$store.commit("setJWT", dataObj.token);
             localStorage.setItem("user_token", dataObj.token); // Needed to persist...
-            if (this.$store.getters.administrator) {
-              this.$router.push({ name: "adminDashboard" });
-            } else {
-              this.$router.push({ name: "home" });
-            }
+            this.$router.push({ name: "signupProfile" });
           } else {
             // Something went horribly wrong
             // TODO: Provide some sort of intelligent error and update the UI with it

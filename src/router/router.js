@@ -2,6 +2,11 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
+const Signup = () =>
+  import(/* webpackChunkName: "signup") */ "../views/Signup.vue");
+const SignupProfile = () =>
+  import(/* webpackChunkName: "signup" */ "../views/SignupProfileRequired.vue");
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -28,8 +33,14 @@ const routes = [
   {
     path: "/signup",
     name: "signup",
-    component: () =>
-      import(/* webpackChunkName: "signup") */ "../views/Signup.vue")
+    component: Signup,
+    children: [
+      {
+        path: "profile",
+        name: "signupProfile",
+        component: SignupProfile
+      }
+    ]
   }
 ];
 
