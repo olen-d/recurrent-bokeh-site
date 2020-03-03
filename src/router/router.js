@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
+const EmptyRouterView = () =>
+  import(/* webpackChunkName: "signup") */ "../components/EmptyRouterView.vue");
 const Signup = () =>
   import(/* webpackChunkName: "signup") */ "../views/Signup.vue");
 const SignupProfile = () =>
@@ -32,9 +34,13 @@ const routes = [
   },
   {
     path: "/signup",
-    name: "signup",
-    component: Signup,
+    component: EmptyRouterView,
     children: [
+      {
+        path: "",
+        name: "signupCredentials",
+        component: Signup
+      },
       {
         path: "profile",
         name: "signupProfile",
